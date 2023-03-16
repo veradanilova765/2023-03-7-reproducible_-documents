@@ -11,13 +11,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
+
 library(palmerpenguins)
 library(knitr) #has kable to look prettier
 library(here)
 #will find root starting thing
 print(getwd())
 
-source(here("R/predict.R")) #ADD HERE 
+source(here("R/predict.R"))
+
+
 kable(head(penguins))
 ```
 
@@ -33,7 +36,6 @@ ggplot(penguins, aes(x = bill_length_mm,
                      color = species)) +
   geom_point()
 ```
-
 
 ```{r penguins-with-lines, echo=TRUE}
 #| message=FALSE,
